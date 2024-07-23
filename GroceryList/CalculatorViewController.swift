@@ -9,7 +9,12 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
     
-    var text: String?
+    var text: String? {
+        didSet {
+            let result = evaluateExpression(text ?? "0")
+            totalLabel.text = "Total: \(result)"
+        }
+    }
     
     @IBOutlet weak var typingField: UITextView!
     @IBOutlet weak var totalLabel: UILabel!
@@ -19,6 +24,8 @@ class CalculatorViewController: UIViewController {
         text = typingField.text
         
     }
+    
+    // MARK: Buttons
     
     @IBAction func digitsAction(_ sender: UIButton) {
         text = typingField.text
