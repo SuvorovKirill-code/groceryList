@@ -11,10 +11,9 @@ import RealmSwift
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var calculatorTextField = "0"
-    
-    @IBOutlet weak var tableView: UITableView!
     var items: Results<Item>!
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var amountLabel: UILabel!
     
     func amountCount() -> Double {
@@ -44,6 +43,48 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? CustomTableViewCell {
+            
+            // Check and set the attributed text for itemLabel
+            if let itemLabel = cell.itemLabel, let nameText = itemLabel.text {
+                let attributeNameString: NSMutableAttributedString
+                if let attributedNameText = itemLabel.attributedText,
+                   attributedNameText.attribute(.strikethroughStyle, at: 0, effectiveRange: nil) != nil {
+                    // Убираем перечеркивание
+                    attributeNameString = NSMutableAttributedString(string: nameText)
+                } else {
+                    // Добавляем перечеркивание
+                    attributeNameString = NSMutableAttributedString(string: nameText)
+                    attributeNameString.addAttribute(.strikethroughStyle,
+                                                     value: NSUnderlineStyle.single.rawValue,
+                                                     range: NSMakeRange(0, attributeNameString.length))
+                }
+                itemLabel.attributedText = attributeNameString
+            }
+
+            // Check and set attributed text for priceLabel
+            if let priceLabel = cell.priceLabel, let priceText = priceLabel.text {
+                let attributePriceString: NSMutableAttributedString
+                if let attributedPriceText = priceLabel.attributedText,
+                   attributedPriceText.attribute(.strikethroughStyle, at: 0, effectiveRange: nil) != nil {
+                    // Убираем перечеркивание
+                    attributePriceString = NSMutableAttributedString(string: priceText)
+                } else {
+                    // Добавляем перечеркивание
+                    attributePriceString = NSMutableAttributedString(string: priceText)
+                    attributePriceString.addAttribute(.strikethroughStyle,
+                                                      value: NSUnderlineStyle.single.rawValue,
+                                                      range: NSMakeRange(0, attributePriceString.length))
+                }
+                priceLabel.attributedText = attributePriceString
+            }
+        }
+
+        // Deselecting a cell after pressing
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let item = items[indexPath.row]
@@ -51,6 +92,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (_, _, completionHandler) in
             StorageManager.deleteObject(item)
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.amountLabel.text = "Amount: \(self.amountCount())$"
             completionHandler(true)
         }
         
@@ -95,14 +137,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     //MARK: Setup Transitions
-    
-//    @IBAction func unwindSegueFromNewItemVC(_ segue: UIStoryboardSegue){
-//        guard let newItemVC = segue.source as? NewItemViewController else { return }
-//        newItemVC.saveItem()
-//        items.append(newItemVC.item!)
-//        tableView.reloadData()
-//        amountLabel.text = "Amount: \(amountCount())$"
-//    }
     
     @IBAction func unwindSegueFromCalculatorVC(_ segue: UIStoryboardSegue){
         guard let calculatorVC = segue.source as? CalculatorViewController else { return }
