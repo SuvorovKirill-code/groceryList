@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A12A0BD2C3D98D7004729AF /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A12A0BC2C3D98D7004729AF /* CalculatorViewController.swift */; };
-		1A1ED2AA2C3C70D500857BF0 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1ED2A92C3C70D500857BF0 /* NewItemViewController.swift */; };
 		1A5C39AB2C4F9D7700C26637 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1A5C39AA2C4F9D7700C26637 /* .gitignore */; };
+		1AA18F832C5656EF00BF2B4F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA18F822C5656EF00BF2B4F /* StorageManager.swift */; };
 		1AC313182C3BD8A0005F76F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC313172C3BD8A0005F76F0 /* AppDelegate.swift */; };
 		1AC3131A2C3BD8A0005F76F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC313192C3BD8A0005F76F0 /* SceneDelegate.swift */; };
 		1AC3131C2C3BD8A0005F76F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3131B2C3BD8A0005F76F0 /* ViewController.swift */; };
@@ -17,13 +17,14 @@
 		1AC313212C3BD8A2005F76F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AC313202C3BD8A2005F76F0 /* Assets.xcassets */; };
 		1AC313242C3BD8A2005F76F0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1AC313232C3BD8A2005F76F0 /* Base */; };
 		1AC3132C2C3BF003005F76F0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3132B2C3BF003005F76F0 /* CustomTableViewCell.swift */; };
-		1AC3132E2C3BF24F005F76F0 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3132D2C3BF24F005F76F0 /* ItemModel.swift */; };
+		1AC3132E2C3BF24F005F76F0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3132D2C3BF24F005F76F0 /* Item.swift */; };
+		4A7731F936260F69A10F9F5D /* Pods_GroceryList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611516471273D92A79A82597 /* Pods_GroceryList.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A12A0BC2C3D98D7004729AF /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
-		1A1ED2A92C3C70D500857BF0 /* NewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 		1A5C39AA2C4F9D7700C26637 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		1AA18F822C5656EF00BF2B4F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		1AC313142C3BD8A0005F76F0 /* GroceryList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AC313172C3BD8A0005F76F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AC313192C3BD8A0005F76F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +34,10 @@
 		1AC313232C3BD8A2005F76F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AC313252C3BD8A2005F76F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AC3132B2C3BF003005F76F0 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		1AC3132D2C3BF24F005F76F0 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		1AC3132D2C3BF24F005F76F0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		2B1C6F5A6EF8535D4B48D9A5 /* Pods-GroceryList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryList.debug.xcconfig"; path = "Target Support Files/Pods-GroceryList/Pods-GroceryList.debug.xcconfig"; sourceTree = "<group>"; };
+		611516471273D92A79A82597 /* Pods_GroceryList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroceryList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C56D29A2E9C3E46D042F55B8 /* Pods-GroceryList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryList.release.xcconfig"; path = "Target Support Files/Pods-GroceryList/Pods-GroceryList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A7731F936260F69A10F9F5D /* Pods_GroceryList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +58,8 @@
 				1AC313162C3BD8A0005F76F0 /* GroceryList */,
 				1A5C39AA2C4F9D7700C26637 /* .gitignore */,
 				1AC313152C3BD8A0005F76F0 /* Products */,
+				AB86625DFE09D00CFF61F1D6 /* Pods */,
+				C28B9605C59A09FECB3BD305 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,16 +77,33 @@
 				1AC313172C3BD8A0005F76F0 /* AppDelegate.swift */,
 				1AC313192C3BD8A0005F76F0 /* SceneDelegate.swift */,
 				1AC3131B2C3BD8A0005F76F0 /* ViewController.swift */,
-				1AC3132D2C3BF24F005F76F0 /* ItemModel.swift */,
+				1AC3132D2C3BF24F005F76F0 /* Item.swift */,
+				1AA18F822C5656EF00BF2B4F /* StorageManager.swift */,
 				1AC3132B2C3BF003005F76F0 /* CustomTableViewCell.swift */,
 				1AC3131D2C3BD8A0005F76F0 /* Main.storyboard */,
 				1A12A0BC2C3D98D7004729AF /* CalculatorViewController.swift */,
-				1A1ED2A92C3C70D500857BF0 /* NewItemViewController.swift */,
 				1AC313202C3BD8A2005F76F0 /* Assets.xcassets */,
 				1AC313222C3BD8A2005F76F0 /* LaunchScreen.storyboard */,
 				1AC313252C3BD8A2005F76F0 /* Info.plist */,
 			);
 			path = GroceryList;
+			sourceTree = "<group>";
+		};
+		AB86625DFE09D00CFF61F1D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B1C6F5A6EF8535D4B48D9A5 /* Pods-GroceryList.debug.xcconfig */,
+				C56D29A2E9C3E46D042F55B8 /* Pods-GroceryList.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C28B9605C59A09FECB3BD305 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				611516471273D92A79A82597 /* Pods_GroceryList.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AC313282C3BD8A2005F76F0 /* Build configuration list for PBXNativeTarget "GroceryList" */;
 			buildPhases = (
+				725EF98F2DCCCC844FDFDE48 /* [CP] Check Pods Manifest.lock */,
 				1AC313102C3BD8A0005F76F0 /* Sources */,
 				1AC313112C3BD8A0005F76F0 /* Frameworks */,
 				1AC313122C3BD8A0005F76F0 /* Resources */,
+				9104FE816BD4C40788428097 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,18 +175,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		725EF98F2DCCCC844FDFDE48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GroceryList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9104FE816BD4C40788428097 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GroceryList/Pods-GroceryList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GroceryList/Pods-GroceryList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GroceryList/Pods-GroceryList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1AC313102C3BD8A0005F76F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AC3132E2C3BF24F005F76F0 /* ItemModel.swift in Sources */,
+				1AC3132E2C3BF24F005F76F0 /* Item.swift in Sources */,
 				1AC3131C2C3BD8A0005F76F0 /* ViewController.swift in Sources */,
-				1A1ED2AA2C3C70D500857BF0 /* NewItemViewController.swift in Sources */,
 				1AC313182C3BD8A0005F76F0 /* AppDelegate.swift in Sources */,
 				1AC3132C2C3BF003005F76F0 /* CustomTableViewCell.swift in Sources */,
 				1A12A0BD2C3D98D7004729AF /* CalculatorViewController.swift in Sources */,
 				1AC3131A2C3BD8A0005F76F0 /* SceneDelegate.swift in Sources */,
+				1AA18F832C5656EF00BF2B4F /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,12 +375,14 @@
 		};
 		1AC313292C3BD8A2005F76F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B1C6F5A6EF8535D4B48D9A5 /* Pods-GroceryList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 485SGTRH6B;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GroceryList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -336,12 +406,14 @@
 		};
 		1AC3132A2C3BD8A2005F76F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C56D29A2E9C3E46D042F55B8 /* Pods-GroceryList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 485SGTRH6B;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GroceryList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

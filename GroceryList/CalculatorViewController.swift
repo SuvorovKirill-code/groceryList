@@ -26,6 +26,8 @@ class CalculatorViewController: UIViewController {
         for button in buttons {
             button.layer.cornerRadius = 20
         }
+        let result = evaluateExpression(text ?? "0")
+        totalLabel?.text = "Total: \(result)"
     }
     
     // MARK: Buttons
