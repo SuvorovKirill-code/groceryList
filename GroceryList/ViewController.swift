@@ -9,10 +9,13 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var calculatorTextField = "0"
+    
     @IBOutlet weak var tableView: UITableView!
     var items = [ItemModel]()
     
     @IBOutlet weak var amountLabel: UILabel!
+    
     func amountCount() -> Double {
         var amount:Double = 0
         for item in 0..<items.count {
@@ -39,6 +42,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
+    //MARK: Setup Transitions
     @IBAction func unwindSegueFromNewItemVC(_ segue: UIStoryboardSegue){
         guard let newItemVC = segue.source as? NewItemViewController else { return }
         newItemVC.saveItem()
@@ -47,5 +51,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         amountLabel.text = "Amount: \(amountCount())$"
     }
     
+    @IBAction func unwindSegueFromCalculatorVC(_ segue: UIStoryboardSegue){
+        guard let calculatorVC = segue.source as? CalculatorViewController else { return }
+        calculatorTextField = calculatorVC.typingField.text
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "calculator" {
+            let calculatorVC = segue.destination as! CalculatorViewController
+            calculatorVC.text = calculatorTextField
+        }
+    }
 }
 

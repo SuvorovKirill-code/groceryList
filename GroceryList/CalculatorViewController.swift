@@ -12,17 +12,20 @@ class CalculatorViewController: UIViewController {
     var text: String? {
         didSet {
             let result = evaluateExpression(text ?? "0")
-            totalLabel.text = "Total: \(result)"
+            totalLabel?.text = "Total: \(result)"
         }
     }
     
     @IBOutlet weak var typingField: UITextView!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet var buttons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        text = typingField.text
-        
+        typingField.text = text
+        for button in buttons {
+            button.layer.cornerRadius = 20
+        }
     }
     
     // MARK: Buttons
@@ -83,11 +86,11 @@ class CalculatorViewController: UIViewController {
     
     func evaluateExpression(_ expression: String) -> Double {
         
-        // Удаляем пробелы из строки
+        // Remove spaces from the string
         var sanitizedExpression = expression.replacingOccurrences(of: " ", with: "")
         
         if sanitizedExpression.isEmpty {
-            typingField.text = "0"
+            typingField?.text = "0"
             sanitizedExpression = "0"
         }
         
@@ -101,7 +104,7 @@ class CalculatorViewController: UIViewController {
             sanitizedExpression.removeLast()
         }
         
-        // Разбиваем строку на числа и операторы
+        // Split the string into numbers and operators
         var components = [String]()
         var currentNumber = ""
         for char in sanitizedExpression {
@@ -123,7 +126,7 @@ class CalculatorViewController: UIViewController {
             components.append("0")
         }
         
-        // Выполняем операции умножения и деления сначала
+        // Perform multiplication and division operations first
         var index = 0
         while index < components.count {
             if components[index] == "*" || components[index] == "/" {
@@ -143,7 +146,7 @@ class CalculatorViewController: UIViewController {
             index += 1
         }
         
-        // Выполняем операции сложения и вычитания
+        // Perform addition and subtraction operations
         
         index = 0
         while index < components.count {

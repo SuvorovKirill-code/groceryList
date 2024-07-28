@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="GO0-He-WFL">
-                                <rect key="frame" x="0.0" y="822.33333333333337" width="430" height="75"/>
+                                <rect key="frame" x="0.0" y="856.33333333333337" width="430" height="75"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zh7-iO-0SA">
                                         <rect key="frame" x="0.0" y="0.0" width="214" height="75"/>
@@ -64,7 +64,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="cKx-wu-UgS">
-                                <rect key="frame" x="0.0" y="744.33333333333337" width="430" height="75"/>
+                                <rect key="frame" x="0.0" y="778.33333333333337" width="430" height="75"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1at-dP-ru3">
                                         <rect key="frame" x="0.0" y="0.0" width="106" height="75"/>
@@ -116,7 +116,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="tQk-tg-mOR">
-                                <rect key="frame" x="0.0" y="666.33333333333337" width="430" height="75"/>
+                                <rect key="frame" x="0.0" y="700.33333333333337" width="430" height="75"/>
                                 <subviews>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBn-Sm-aCp">
                                         <rect key="frame" x="0.0" y="0.0" width="106" height="75"/>
@@ -168,7 +168,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="hPB-MG-hlp">
-                                <rect key="frame" x="0.0" y="588.33333333333337" width="430" height="75"/>
+                                <rect key="frame" x="0.0" y="622.33333333333337" width="430" height="75"/>
                                 <subviews>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhW-I4-iPW">
                                         <rect key="frame" x="0.0" y="0.0" width="106" height="75"/>
@@ -220,7 +220,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3aS-WW-enH">
-                                <rect key="frame" x="0.0" y="510.33333333333326" width="430" height="75"/>
+                                <rect key="frame" x="0.0" y="544.33333333333337" width="430" height="75"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eT-H5-5ie">
                                         <rect key="frame" x="0.0" y="0.0" width="106" height="75"/>
@@ -266,7 +266,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzL-MM-1bi">
-                                <rect key="frame" x="201" y="464.33333333333331" width="209" height="30"/>
+                                <rect key="frame" x="201" y="498.33333333333326" width="209" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="209" id="pnj-cC-oyJ"/>
                                 </constraints>
@@ -275,7 +275,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMi-gM-6S9">
-                                <rect key="frame" x="20" y="384.33333333333331" width="390" height="60"/>
+                                <rect key="frame" x="20" y="418.33333333333331" width="390" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="zAX-n3-3rn"/>
@@ -284,6 +284,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQY-hk-dc1">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="44"/>
+                                <items>
+                                    <navigationItem title="Calculator" id="sah-Ix-V6e">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="ttg-7f-GNy">
+                                            <connections>
+                                                <segue destination="m5y-7k-vxR" kind="unwind" unwindAction="unwindSegueFromCalculatorVC:" id="Tpq-9k-KoA"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VGu-sX-dhq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -295,11 +307,13 @@
                             <constraint firstItem="GO0-He-WFL" firstAttribute="leading" secondItem="VGu-sX-dhq" secondAttribute="leading" id="7uR-AI-UHO"/>
                             <constraint firstItem="VGu-sX-dhq" firstAttribute="trailing" secondItem="GO0-He-WFL" secondAttribute="trailing" id="ILv-6f-eP3"/>
                             <constraint firstItem="3aS-WW-enH" firstAttribute="top" secondItem="rzL-MM-1bi" secondAttribute="bottom" constant="16" id="LpT-RP-xpt"/>
+                            <constraint firstItem="HQY-hk-dc1" firstAttribute="trailing" secondItem="VGu-sX-dhq" secondAttribute="trailing" id="QQD-Uh-dCP"/>
                             <constraint firstItem="VGu-sX-dhq" firstAttribute="bottom" secondItem="GO0-He-WFL" secondAttribute="bottom" constant="0.66666666666662877" id="Rbm-nN-7RX"/>
                             <constraint firstItem="VGu-sX-dhq" firstAttribute="trailing" secondItem="tQk-tg-mOR" secondAttribute="trailing" id="Rhm-cC-2mY"/>
                             <constraint firstItem="VGu-sX-dhq" firstAttribute="trailing" secondItem="hPB-MG-hlp" secondAttribute="trailing" id="S6U-7R-L71"/>
                             <constraint firstItem="cKx-wu-UgS" firstAttribute="top" secondItem="tQk-tg-mOR" secondAttribute="bottom" constant="3" id="ST8-3Q-PuQ"/>
                             <constraint firstItem="GO0-He-WFL" firstAttribute="top" secondItem="cKx-wu-UgS" secondAttribute="bottom" constant="3" id="UgE-lY-Idr"/>
+                            <constraint firstItem="HQY-hk-dc1" firstAttribute="leading" secondItem="VGu-sX-dhq" secondAttribute="leading" id="ZqR-IH-WAP"/>
                             <constraint firstItem="VGu-sX-dhq" firstAttribute="trailing" secondItem="mMi-gM-6S9" secondAttribute="trailing" constant="20" id="g4K-0Z-8nd"/>
                             <constraint firstItem="cKx-wu-UgS" firstAttribute="leading" secondItem="VGu-sX-dhq" secondAttribute="leading" id="gxz-bR-qVt"/>
                             <constraint firstItem="VGu-sX-dhq" firstAttribute="trailing" secondItem="3aS-WW-enH" secondAttribute="trailing" id="isk-Yb-lSu"/>
@@ -308,6 +322,7 @@
                             <constraint firstItem="hPB-MG-hlp" firstAttribute="leading" secondItem="VGu-sX-dhq" secondAttribute="leading" id="lXt-gQ-QUI"/>
                             <constraint firstItem="rzL-MM-1bi" firstAttribute="top" secondItem="mMi-gM-6S9" secondAttribute="bottom" constant="20" id="nuE-sl-mFd"/>
                             <constraint firstItem="tQk-tg-mOR" firstAttribute="top" secondItem="hPB-MG-hlp" secondAttribute="bottom" constant="3" id="tj6-4e-E73"/>
+                            <constraint firstItem="HQY-hk-dc1" firstAttribute="top" secondItem="VGu-sX-dhq" secondAttribute="top" id="wc5-gs-Me2"/>
                             <constraint firstItem="tQk-tg-mOR" firstAttribute="leading" secondItem="VGu-sX-dhq" secondAttribute="leading" id="woh-zE-ZOo"/>
                         </constraints>
                     </view>
@@ -315,9 +330,29 @@
                     <connections>
                         <outlet property="totalLabel" destination="rzL-MM-1bi" id="6xS-N1-1If"/>
                         <outlet property="typingField" destination="mMi-gM-6S9" id="5tX-xQ-vCe"/>
+                        <outletCollection property="buttons" destination="zh7-iO-0SA" collectionClass="NSMutableArray" id="Upe-eP-gBr"/>
+                        <outletCollection property="buttons" destination="lWJ-mQ-Av1" collectionClass="NSMutableArray" id="b99-jt-UoZ"/>
+                        <outletCollection property="buttons" destination="FBi-QP-Rdx" collectionClass="NSMutableArray" id="VmC-oA-B0h"/>
+                        <outletCollection property="buttons" destination="1at-dP-ru3" collectionClass="NSMutableArray" id="7Hc-Yk-DSP"/>
+                        <outletCollection property="buttons" destination="Xvx-TE-JIp" collectionClass="NSMutableArray" id="szm-q2-0x4"/>
+                        <outletCollection property="buttons" destination="0XY-nY-Ygi" collectionClass="NSMutableArray" id="Rb7-Ip-3wn"/>
+                        <outletCollection property="buttons" destination="fim-uV-sU1" collectionClass="NSMutableArray" id="Lmx-oK-cCW"/>
+                        <outletCollection property="buttons" destination="GBn-Sm-aCp" collectionClass="NSMutableArray" id="Gzw-Vz-e8b"/>
+                        <outletCollection property="buttons" destination="I8s-Nc-SLD" collectionClass="NSMutableArray" id="bwH-8Y-5Cf"/>
+                        <outletCollection property="buttons" destination="dFY-r3-9wx" collectionClass="NSMutableArray" id="4SO-Go-t7c"/>
+                        <outletCollection property="buttons" destination="9XU-Oj-Ylw" collectionClass="NSMutableArray" id="2Xj-Hf-DQz"/>
+                        <outletCollection property="buttons" destination="hhW-I4-iPW" collectionClass="NSMutableArray" id="p0h-LY-sbW"/>
+                        <outletCollection property="buttons" destination="bvD-t6-byP" collectionClass="NSMutableArray" id="Wbz-3S-FBV"/>
+                        <outletCollection property="buttons" destination="dlW-LP-Dnr" collectionClass="NSMutableArray" id="zEu-uG-hdy"/>
+                        <outletCollection property="buttons" destination="8Yc-hy-Mph" collectionClass="NSMutableArray" id="j4i-SP-oL2"/>
+                        <outletCollection property="buttons" destination="0eT-H5-5ie" collectionClass="NSMutableArray" id="cYF-e6-YOO"/>
+                        <outletCollection property="buttons" destination="dgL-6R-pTy" collectionClass="NSMutableArray" id="05B-sQ-Ga0"/>
+                        <outletCollection property="buttons" destination="yU5-rg-Am1" collectionClass="NSMutableArray" id="Q0H-9u-pAE"/>
+                        <outletCollection property="buttons" destination="sK3-ha-aEH" collectionClass="NSMutableArray" id="bwD-7c-2Qm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="otb-RG-Esd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="m5y-7k-vxR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1539.0697674418604" y="-847.2103004291846"/>
         </scene>
@@ -406,7 +441,7 @@
                     <navigationItem key="navigationItem" title="Grocery List" id="SEh-Rd-egP">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="cart" catalog="system" id="oBp-HZ-RWf">
                             <connections>
-                                <segue destination="g4x-j6-WAR" kind="show" id="Uw5-rE-IEe"/>
+                                <segue destination="g4x-j6-WAR" kind="presentation" identifier="calculator" modalPresentationStyle="fullScreen" id="Uw5-rE-IEe"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="GbB-gX-z2S">
