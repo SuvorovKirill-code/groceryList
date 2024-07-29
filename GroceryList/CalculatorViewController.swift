@@ -11,7 +11,8 @@ class CalculatorViewController: UIViewController {
     
     var text: String? {
         didSet {
-            let result = evaluateExpression(text ?? "0")
+            let components = getComponents(text ?? "0")
+            let result = String(format: "%.2f", evaluateExpression(components))
             totalLabel?.text = "Total: \(result)"
         }
     }
@@ -26,13 +27,17 @@ class CalculatorViewController: UIViewController {
         for button in buttons {
             button.layer.cornerRadius = 20
         }
-        let result = evaluateExpression(text ?? "0")
+        let components = getComponents(text ?? "0")
+        let result = String(format: "%.2f", evaluateExpression(components))
         totalLabel?.text = "Total: \(result)"
     }
     
     // MARK: Buttons
     
     @IBAction func digitsAction(_ sender: UIButton) {
+        if typingField.text == "0"{
+            typingField.text = ""
+        }
         text = typingField.text
         typingField.text = text! + String(sender.tag)
         text = typingField.text
@@ -48,6 +53,26 @@ class CalculatorViewController: UIViewController {
     @IBAction func allClearAction(_ sender: UIButton) {
         typingField.text = ""
         totalLabel.text = "Total: "
+    }
+    
+    @IBAction func clearAction(_ sender: UIButton) {
+        var components = getComponents(typingField.text)
+        components = components.dropLast()
+        components = components.dropLast()
+        let string = components.joined(separator: "")
+        typingField.text = string
+        text = typingField.text
+    }
+    
+    @IBAction func percentButton(_ sender: UIButton) {
+        var components = getComponents(typingField.text)
+        var last = Double(components.last ?? "0") ?? 0
+        last = last/100
+        components = components.dropLast()
+        components.append(String(last))
+        let string = components.joined(separator: "")
+        typingField.text = string
+        text = typingField.text
     }
     
     @IBAction func plusAction(_ sender: UIButton) {
@@ -80,13 +105,12 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func totalButton(_ sender: UIButton) {
-        text = typingField.text
-        let expression = text!
-        let result = evaluateExpression(expression)
-            totalLabel.text = "Total: \(result)"
+        let components = getComponents(text ?? "0")
+        let result = String(format: "%.2f", evaluateExpression(components))
+        totalLabel?.text = "Total: \(result)"
     }
     
-    func evaluateExpression(_ expression: String) -> Double {
+    func getComponents(_ expression: String) -> [String] {
         
         // Remove spaces from the string
         var sanitizedExpression = expression.replacingOccurrences(of: " ", with: "")
@@ -114,7 +138,7 @@ class CalculatorViewController: UIViewController {
                 currentNumber.append(char)
             } else {
                 if !currentNumber.isEmpty {
-                    guard let num = Double(currentNumber) else { return 0.0}
+                    guard let num = Double(currentNumber) else { return ["0"] }
                     components.append(String(num))
                     currentNumber = ""
                 }
@@ -127,6 +151,13 @@ class CalculatorViewController: UIViewController {
         } else {
             components.append("0")
         }
+        
+        return components
+    }
+    
+    func evaluateExpression(_ array: [String]) -> Double {
+        
+        var components = array
         
         // Perform multiplication and division operations first
         var index = 0
@@ -169,7 +200,7 @@ class CalculatorViewController: UIViewController {
             index += 1
         }
         
-        if let finalResult = Double(components.first!) {
+        if let finalResult = Double(components.first ?? "0") {
             return finalResult
         } else {
             return 0.0
